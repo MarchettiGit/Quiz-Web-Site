@@ -3,55 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do quiz!</title>
+    <title>vavaQuiz</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ASSETS/ico/256x256.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
-        <div class="screen active" id="start-screen">
-                <h1>HORA DO QUIZ!</h1>
-                <p>Teste seu conhecimento!</p>
-                <button id="start-btn">Start Screen</button>
 
-        </div> 
+    <!-- START -->
+    <div class="screen active" id="start-screen">
+        <h1>AS FADA QUE ATIRA</h1>
+        <p>Tu é bom no vava?</p>
+        <button id="start-btn">Iniciar</button>
+    </div> 
 
+    <!-- QUIZ -->
+    <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+            <h2 id="question-text">Questão vem aqui</h2>
 
-        <div class="screen" id="quiz-screen">
-            <div class="quiz-header">
-                <h2 id="question-text">Questão vem aqui</h2>
-                <div class="quiz-info">
-                    <p>
-                        Question <span id="current-question">1</span> of <span>5</span>
-                    </p>
+            <div class="quiz-info">
+                <p>
+                    Question <span id="current-question">1</span> of 
+                    <span id="total-questions">5</span>
+                </p>
 
-                    <p>
-                        Score: <span id="score"></span>
-                    </p>
-                </div>
+                <p>
+                    Score: <span id="score"></span>
+                </p>
+            </div>
 
-                <div id="answers-container" class="answers-container">
-                    <!--Reposta vão estar aqui atraves do js
-                    em algum momento do js-->
-                </div>
+            <div id="answers-container" class="answers-container"></div>
 
-                <div class="progress-bar">
-                    <div id="progress" class="progress"></div>
-                </div>
-
-                <div id="result-screen" class="screen">
-
-                    <h1>Resultados finais</h1>
-                    <div class="result-info">
-                        <p>You scored  <span id="final-score">0</span>out of <span id="max-score">5</span>
-                        </p>
-                        <div id="result-message">Good job!</div>
-                        
-                    </div>
-                    <button id="restart-btn">Refaça o quiz!</button>
-                </div>
-
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
             </div>
         </div>
     </div>
+
+    <!-- RESULTADO (FORA DO QUIZ!) -->
+    <div id="result-screen" class="screen">
+        <h1>Resultados finais</h1>
+
+        <div class="result-info">
+            <p>
+                You scored <span id="final-score">0</span> out of 
+                <span id="max-score">5</span>
+            </p>
+
+            <div id="result-message">Good job!</div>
+        </div>
+
+        <button id="restart-btn">Refaça o quiz!</button>
+    </div>
+
+</div>
+    <script src="script.js"></script>
 </body>
 </html>
